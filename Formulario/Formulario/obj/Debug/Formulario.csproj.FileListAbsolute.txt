@@ -9,3 +9,4 @@ C:\Users\Romao\source\repos\PDSII-exercicio4\Formulario\Formulario\obj\Debug\For
 C:\Users\Romao\source\repos\PDSII-exercicio4\Formulario\Formulario\obj\Debug\Formulario.exe
 C:\Users\Romao\source\repos\PDSII-exercicio4\Formulario\Formulario\obj\Debug\Formulario.pdb
 C:\Users\Romao\source\repos\PDSII-exercicio4\Formulario\Formulario\obj\Debug\Formulario.Form2.resources
+C:\Users\Romao\source\repos\PDSII-exercicio4\Formulario\Formulario\obj\Debug\Formulario.Form3.resources

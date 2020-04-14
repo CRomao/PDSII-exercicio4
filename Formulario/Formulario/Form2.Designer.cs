@@ -32,8 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.tbSenha = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -54,8 +54,8 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.tbSenha);
+            this.panel1.Controls.Add(this.tbUsuario);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -84,21 +84,22 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Senha:";
             // 
-            // textBox1
+            // tbUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBox1.Location = new System.Drawing.Point(113, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 26);
-            this.textBox1.TabIndex = 3;
+            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.tbUsuario.Location = new System.Drawing.Point(113, 76);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(241, 26);
+            this.tbUsuario.TabIndex = 3;
             // 
-            // textBox2
+            // tbSenha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBox2.Location = new System.Drawing.Point(113, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 26);
-            this.textBox2.TabIndex = 4;
+            this.tbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.tbSenha.Location = new System.Drawing.Point(113, 113);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
+            this.tbSenha.Size = new System.Drawing.Size(241, 26);
+            this.tbSenha.TabIndex = 4;
             // 
             // button1
             // 
@@ -109,6 +110,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -119,6 +121,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Sair";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
@@ -141,8 +144,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbSenha;
+        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
     }

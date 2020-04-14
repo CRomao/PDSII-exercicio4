@@ -12,6 +12,8 @@ namespace Formulario
 {
     public partial class Form1 : Form
     {
+
+        public Usuario usuario = null;
         public Form1()
         {
             InitializeComponent();
@@ -19,19 +21,31 @@ namespace Formulario
         
         private void button1_Click(object sender, EventArgs e)
         {
-            if (tbLogin.Text == "admin" && tbSenha.Text == "admin")
+
+            if (usuario != null)
             {
-                MessageBox.Show("Login realizado com sucesso!", 
-                    "Mensagem do Sistema", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Information);
+                if (tbLogin.Text == usuario.getUsuario() && tbSenha.Text == usuario.getSenha())
+                {
+                    MessageBox.Show("Login realizado com sucesso!",
+                        "Mensagem do Sistema", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    chamarTelaPrincipal();
+                }
+                else
+                {
+                    MessageBox.Show("Login ou senha inválido!",
+                        "Mensagem do Sistema", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
             }
             else
             {
-                MessageBox.Show("Login ou senha inválido!",
+                MessageBox.Show("Login ou senha inválido!\n\nCaso não tenha um cadastro, pode fazer\nno botão cadastrar.",
                     "Mensagem do Sistema", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-                cadastrar();
             }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,7 +55,21 @@ namespace Formulario
 
         public void cadastrar()
         {
-            new Form2().Show();
+            Form2 form2 = new Form2(this);
+            form2.Show();
+                
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cadastrar();
+        }
+
+        public void chamarTelaPrincipal()
+        {
+            Form3 principal = new Form3(usuario.getUsuario());
+            principal.Show();
+            
         }
     }
 }
