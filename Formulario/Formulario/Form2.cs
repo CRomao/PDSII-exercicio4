@@ -12,8 +12,6 @@ namespace Formulario
 {
     public partial class Form2 : Form
     {
-
-        Usuario usuario;
         Form1 login;
 
         public Form2(Form1 form1)
@@ -43,22 +41,15 @@ namespace Formulario
 
         public void cadastrarUsuario()
         {
-            usuario = new Usuario(tbUsuario.Text, tbSenha.Text);
+            login.usuario = new Usuario(tbUsuario.Text, tbSenha.Text);
             MessageBox.Show("Usuário cadastrado com sucesso!",
                         "Mensagem do Sistema", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-            login.usuario = usuario;
             this.Close();
-        }
-
-        public Usuario getUsuario()
-        {
-            return usuario;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            login.usuario = usuario;
             this.Close();
         }
     }
