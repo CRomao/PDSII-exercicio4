@@ -16,5 +16,32 @@ namespace Formulario
         {
             InitializeComponent();
         }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tbLogin.Text == "admin" && tbSenha.Text == "admin")
+            {
+                MessageBox.Show("Login realizado com sucesso!", 
+                    "Mensagem do Sistema", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Login ou senha inválido!",
+                    "Mensagem do Sistema", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                cadastrar();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        public void cadastrar()
+        {
+            new Form2().Show();
+        }
     }
 }
